@@ -177,6 +177,28 @@ My assumptions
 // Implement Goal #2 below...
 
 
+// create empty list of probabilities (dictionary)
+var wordCounts = [String: Int]()
+
+// loop over the input string
+for word in content.componentsSeparatedByCharactersInSet(delimiters) {
+    
+    // inspect each word
+    word
+    // build the dictionary (list) of word counts
+    if wordCounts[word] == nil {
+        wordCounts[word] = 1        // first time for this word!
+    } else {
+        //This word is in the dictionary so just add 1 to the current count
+        wordCounts[word]! = wordCounts[word]! + 1
+    }
+}
+
+// This is the dictionary we have built – it actually shows letter COUNTS, not probabilities – YET.
+wordCounts
+
+
+
 /*:
 
 ## Goal 3
@@ -204,23 +226,5 @@ Implement your algorithm further down, below where you typed out your algorithm.
 
 Remember to save and commit your work to GitHub when you have completed a part of the solution that you don't want to lose.  Definitely commit your work when the algorithm is fully implemented.
 */
-
-/*
-
-Goal #3
-=======
-
-My algorithm
-------------
-
-
-My assumptions
---------------
-
-
-*/
-
-
-// Implement Goal #3 below...
 
 
